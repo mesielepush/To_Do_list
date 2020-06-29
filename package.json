@@ -1,0 +1,22 @@
+{
+  "name": "to_do_list",
+  "version": "1.0.0",
+  "description": "To do list to manage times",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mesielepush/To_Do_list.git"
+  },
+  "keywords": [
+    "ToDo"
+  ],
+  "author": "Jonathan Marin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mesielepush/To_Do_list/issues"
+  },
+  "homepage": "https://github.com/mesielepush/To_Do_list#readme"
+}
