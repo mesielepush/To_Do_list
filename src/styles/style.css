@@ -38,10 +38,14 @@
 
 @-webkit-keyframes example {
   from {
+    background-color: black;
+    color: #080000;
     -webkit-box-shadow: 0px 0px 68px 89px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 68px 89px rgba(0, 0, 0, 0.75);
   }
   to {
+    background-color: grey;
+    color: #f0dbdb;
     -webkit-box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.75);
   }
@@ -49,10 +53,14 @@
 
 @keyframes example {
   from {
+    background-color: black;
+    color: #080000;
     -webkit-box-shadow: 0px 0px 68px 89px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 68px 89px rgba(0, 0, 0, 0.75);
   }
   to {
+    background-color: grey;
+    color: #f0dbdb;
     -webkit-box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.75);
   }
@@ -61,8 +69,8 @@
 .nothing_here {
   padding: 2rem;
   background-color: grey;
-  margin-top: 15rem;
-  color: white;
+  margin-top: 11rem;
+  color: #f0dbdb;
   font-size: 2rem;
   font-weight: 700;
   font-family: 'MuseoModerno', cursive;
