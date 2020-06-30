@@ -1,5 +1,6 @@
 import show_step from './show_step'
 import Storage from  './storage'
+import save_step from './save_step'
 const show_project = (name) =>{
     const content = document.getElementById('main')
     content.innerHTML = '';
@@ -77,8 +78,12 @@ const show_project = (name) =>{
                 </div>
     `
     content.innerHTML+=template;
-    
-    const steps = Storage.read(name).projectSteps
+    const this_project = Storage.read(name)
+    const steps = this_project.projectSteps
+    const new_step = document.getElementById('save_step')
+    new_step.addEventListener('click', function(){
+        save_step(this_project)
+    })
     console.log(steps)
 }
 export default show_project

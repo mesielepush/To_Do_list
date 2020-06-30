@@ -17,9 +17,16 @@ const Storage = (()=>{
         }
         return false
     }
-    const All_projects = () => Object.keys(localStorage)
+    const update = (key, data) => {
+        if (Object.keys(localStorage).includes(key)) {
+          localStorage.setItem(key, JSON.stringify(data));
+          return true;
+        }
+        return false;
+      };
+    const all_projects = () => Object.keys(localStorage)
     return{ 
-        create, erase, read, All_projects
+        create, erase, read, update, all_projects
     }
 })();
 

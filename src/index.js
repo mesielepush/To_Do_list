@@ -1,11 +1,5 @@
 import './styles/style.scss';
-
+import Project from './projects'
 import navbar from './navbar'
-
+import step from './step'
 navbar()
-
-/* const one = Project;
-one.projectName = 'Popotito'
-const one_step = step( 'Something to do', 'I do somethings and such', '15/05/2020','High',true)
-one.addStep(one_step)
-console.log(one.projectSteps) */
