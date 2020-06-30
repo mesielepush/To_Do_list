@@ -85,6 +85,10 @@
   display: block;
 }
 
+.sidenav .project_name_sided_bar {
+  color: white;
+}
+
 .sidenav .projects_text {
   text-align: center;
   background-color: #918a8a;
@@ -92,6 +96,11 @@
   font-size: 20px;
   color: #ffffff;
   display: block;
+}
+
+.sidenav #projects {
+  max-height: 10rem;
+  overflow-y: hidden;
 }
 
 .sidenav a:hover {

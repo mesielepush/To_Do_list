@@ -61,7 +61,9 @@
             display: block;
           }
     }
-    
+    .project_name_sided_bar{
+      color:white;
+    }
     .projects_text{
         text-align: center;
         background-color: rgb(145, 138, 138);
@@ -69,6 +71,10 @@
         font-size: 20px;
         color: #ffffff;
         display: block;
+    }
+    #projects{
+      max-height: 10rem;
+      overflow-y: hidden;
     }
   }  
   .sidenav a:hover {
