@@ -71,3 +71,20 @@
       -moz-box-shadow: 0px 0px 68px 0px rgba(0,0,0,0.75);
       box-shadow: 0px 0px 68px 0px rgba(0,0,0,0.75);;
   }
+  .step_div{
+    width: 100%;
+    position: relative;
+    left:5rem;
+    height: auto;
+    background-color: red;
+    .single_step{
+      background-color: green;
+      height: 2rem;
+      margin-bottom: 0.5rem;
+      div{
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        height: 100%;
+      }
+    }
+  }
