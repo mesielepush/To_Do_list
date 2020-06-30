@@ -1,9 +1,10 @@
-const steps = ( project, title, description, date,priority,status) => {
+
+const step = ( title, description, date,priority,status) => {
                     const stepTitle = title;
                     const stepDescription = description;
                     const stepDate = date;
                     const stepPriority = priority;
-                    const stepProject = project;
+                    const stepProject = '';
                     const stepStatus = status;
                 
                 return {
@@ -14,4 +15,4 @@ const steps = ( project, title, description, date,priority,status) => {
                     stepStatus
                 };
             }
-export default steps
+export default step

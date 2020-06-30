@@ -1,5 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@-webkit-keyframes new_buttton_animation {
+  from {
+    background-color: white;
+    width: 4rem;
+    height: 3rem;
+  }
+  to {
+    background-color: yellowgreen;
+    width: 4.5rem;
+    height: 3.5rem;
+  }
+}
+@keyframes new_buttton_animation {
+  from {
+    background-color: white;
+    width: 4rem;
+    height: 3rem;
+  }
+  to {
+    background-color: yellowgreen;
+    width: 4.5rem;
+    height: 3.5rem;
+  }
+}
+
 .navbar {
   height: 5rem;
   background-color: #111;
@@ -9,6 +36,29 @@
   font-size: 2.5rem;
   font-family: 'Piedra', cursive;
   color: #f0eddb;
+}
+
+.navbar .new_buttton {
+  position: absolute;
+  right: 5rem;
+  background-color: white;
+  width: 4rem;
+  height: 3rem;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: 'Acme', sans-serif;
+}
+
+.navbar .new_buttton:hover {
+  -webkit-animation-name: new_buttton_animation;
+          animation-name: new_buttton_animation;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  background-color: yellowgreen;
+  width: 4.5rem;
+  height: 3.5rem;
+  cursor: cell;
 }
 
 .sidenav {
@@ -99,18 +149,84 @@
   position: relative;
   left: 5rem;
   height: auto;
-  background-color: red;
+}
+
+.step_div div {
+  border: 1px solid black;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.step_div .allsteps_title {
+  background-color: #e8ecf1;
+  font-family: 'Holtwood One SC', serif;
+  height: 4rem;
+  border-radius: 20px !important;
+}
+
+.step_div .allsteps_title span {
+  position: relative;
+  left: -2.5rem;
 }
 
 .step_div .single_step {
-  background-color: green;
   height: 2rem;
   margin-bottom: 0.5rem;
 }
 
-.step_div .single_step div {
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-  height: 100%;
+.step_div .single_step .project_name {
+  width: 11rem;
+  background-color: #e8ecf1;
+}
+
+.step_div .single_step .project_name_fix {
+  width: 11rem;
+  background-color: #e8ecf1;
+  font-family: 'Holtwood One SC', serif;
+}
+
+.step_div .single_step .death_line_fix {
+  width: 6.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.7rem;
+  font-family: 'Holtwood One SC', serif;
+  background-color: #e8ecf1;
+}
+
+.step_div .single_step .step_name {
+  width: 45rem;
+  background-color: whitesmoke;
+}
+
+.step_div .single_step .step_name_fix {
+  width: 45rem;
+  background-color: whitesmoke;
+  font-family: 'Holtwood One SC', serif;
+}
+
+.step_div .single_step .priority {
+  width: 6rem;
+}
+
+.step_div .single_step .priority_fix {
+  width: 6rem;
+  font-family: 'Holtwood One SC', serif;
+  background-color: #e8ecf1;
+  font-size: 0.8rem;
+}
+
+.step_div .single_step .erase_link {
+  background-color: whitesmoke;
+}
+
+.step_div .single_step .completed_link {
+  background-color: whitesmoke;
+}
+
+.step_div .single_step .death_line {
+  background-color: whitesmoke;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */

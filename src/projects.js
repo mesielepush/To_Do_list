@@ -1,10 +1,10 @@
-const { default: steps } = require("./steps");
 
-const Project = (name) =>{
+const Project = ((name) =>{
     const projectName = name;
     const projectSteps = [];
     
     const addStep = (step) => {
+        step.stepProject = name
         projectSteps.push(step)
     };
     return {
@@ -12,5 +12,5 @@ const Project = (name) =>{
         projectSteps,
         addStep,
     }
-}
+})();
 export default Project
