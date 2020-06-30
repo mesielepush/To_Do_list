@@ -9,7 +9,7 @@ const show_project = (name) =>{
                             <span style='font-size:2rem'>${name}</span>
                         </div>
                         <div class="single_step d-flex align-items-center" style='margin-bottom: 3rem;'>
-                            <div class="project_name_fix d-flex justify-content-center align-items-center">NewStep</div>
+                            <div class="project_name_fix d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#new_step_modal" id='new_step'>NewStep</div>
                             <div class="step_name_fix d-flex justify-content-center align-items-center">Steps</div>
                             <div class="erase_link d-flex align-items-center">
                                 <svg  width="32" height="32" xmlns="" fill='red'>
@@ -34,7 +34,7 @@ const show_project = (name) =>{
                         
                     </div>
 
-                    <div class="modal fade" id="new_project_modal" tabindex="-1" role="dialog" aria-labelledby="new_project_modal" aria-hidden="true">
+                    <div class="modal fade" id="new_step_modal" tabindex="-1" role="dialog" aria-labelledby="new_step_modal" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -46,25 +46,39 @@ const show_project = (name) =>{
                                 <div class="modal-body">
                                 <form>
                                     <div class="form-group">
-                                    <label for="recipient-name" class="col-form-label">Project Name:</label>
-                                    <input type="text" class="form-control" id="project-name">
+                                        <label for="recipient-name" class="col-form-label">Step Name:</label>
+                                        <input type="text" class="form-control" id="step-name">
                                     </div>
                                     <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Description:</label>
-                                    <input class="form-control" id="project-description">
+                                        <label for="message-text" class="col-form-label">Description:</label>
+                                        <input class="form-control" id="step-description">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Death Line:</label>
+                                        <input type="date" class="form-control" id="death_line_step">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="priority">Priority</label>
+                                        <select class="form-control" id="priority_step">
+                                        <option hidden="" selected="">Priority</option>
+                                        <option value="high">High</option>
+                                        <option value="moderate">Moderate</option>
+                                        <option value="low">Low</option>
+                                        </select>
                                     </div>
                                 </form>
                                 </div>
                                 <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" id = 'save' >Save</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" id = 'save_step' >Save</button>
                                 </div>
                             </div>
                         </div>
                 </div>
     `
-    content.innerHTML+=template
-    const steps = Storage.read(name)
+    content.innerHTML+=template;
+    
+    const steps = Storage.read(name).projectSteps
     console.log(steps)
 }
 export default show_project

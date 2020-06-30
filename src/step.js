@@ -1,11 +1,11 @@
 
-const step = ( title, description, date,priority,status) => {
+const step = ( title, description, date,priority) => {
                     const stepTitle = title;
                     const stepDescription = description;
                     const stepDate = date;
                     const stepPriority = priority;
                     const stepProject = '';
-                    const stepStatus = status;
+                    const stepStatus = true;
                 
                 return {
                     stepTitle,
