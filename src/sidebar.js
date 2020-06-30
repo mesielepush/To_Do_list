@@ -1,4 +1,5 @@
 import Storage from './storage'
+import show_project from './show_project'
 const sidebar =()=>{
     const content = document.getElementById('body');
     
@@ -35,12 +36,18 @@ const sidebar =()=>{
 
     Object.entries(localStorage).forEach((item)=>{
         const project_list_name  = `
-        <a>${item[0]}</a>
+        <a class = 'projects_link'>${item[0]}</a>
         `
-        console.log(item)
         project_list.innerHTML+= project_list_name
     }) 
 
-    
+    const projects = document.getElementsByClassName('projects_link');
+    for (var i = 0; i < projects.length; i++) {
+        var inside_text = projects[i].textContent
+        console.log(inside_text)
+        projects[i].addEventListener('click', ()=>{
+            show_project(inside_text);
+         })
+    }
 };
 export default sidebar

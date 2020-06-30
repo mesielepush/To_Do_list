@@ -8,6 +8,7 @@ const navbar = ()=>{
                 <nav class="navbar d-flex justify-content-center">
                     <a class="navbar-brand" href="#">easy2do</a>
                     <a class="new_buttton d-flex justify-content-center align-items-center" id = 'new_project' data-toggle="modal" data-target="#new_project_modal"> NEW </a>
+                    
                 </nav>
                 
 
@@ -45,8 +46,7 @@ const navbar = ()=>{
     const start = document.getElementById('save')
     start.addEventListener('click',function(){
         saves();
-     });
-    
+     });   
     
 };
 export default navbar
