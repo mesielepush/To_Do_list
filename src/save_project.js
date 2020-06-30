@@ -16,8 +16,7 @@ const save_project = ()=>{
       one.projectDescription = p_description;
       cleanForm();
       Storage.create(one.projectName,one)
-      console.log('one; ',one);
-      console.log('console log NAME: ',one.projectName)
+      
       navbar()
     
 };

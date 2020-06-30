@@ -43,9 +43,8 @@ const sidebar =()=>{
 
     const projects = document.getElementsByClassName('projects_link');
     for (var i = 0; i < projects.length; i++) {
-        var inside_text = projects[i].textContent
-        console.log(inside_text)
-        projects[i].addEventListener('click', ()=>{
+        const inside_text = projects[i].textContent
+        projects[i].addEventListener('click', function(){
             show_project(inside_text);
          })
     }

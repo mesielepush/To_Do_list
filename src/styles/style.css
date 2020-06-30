@@ -226,6 +226,63 @@
   font-family: 'Holtwood One SC', serif;
 }
 
+@-webkit-keyframes project_name_fix_animation {
+  from {
+    background-color: #f5efef;
+  }
+  to {
+    background-color: yellowgreen;
+  }
+}
+
+@keyframes project_name_fix_animation {
+  from {
+    background-color: #f5efef;
+  }
+  to {
+    background-color: yellowgreen;
+  }
+}
+
+.step_div .single_step .project_name_fix:hover {
+  -webkit-animation-name: project_name_fix_animation;
+          animation-name: project_name_fix_animation;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+
+.step_div .single_step .completed_link_fix {
+  fill: black;
+}
+
+@-webkit-keyframes completed_link_fix_animation {
+  from {
+    fill: black;
+  }
+  to {
+    fill: #668d18;
+  }
+}
+
+@keyframes completed_link_fix_animation {
+  from {
+    fill: black;
+  }
+  to {
+    fill: #668d18;
+  }
+}
+
+.step_div .single_step .completed_link_fix:hover {
+  fill: #668d18;
+  -webkit-animation-name: completed_link_fix_animation;
+          animation-name: completed_link_fix_animation;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
 .step_div .single_step .death_line_fix {
   width: 6.5rem;
   padding-left: 0.5rem;

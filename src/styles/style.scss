@@ -162,6 +162,44 @@
         background-color: rgb(232, 236, 241);
         font-family: 'Holtwood One SC', serif;;
       }
+      @keyframes project_name_fix_animation {
+        from {
+            background-color: rgb(245, 239, 239);
+            
+            
+        }
+        to {
+          background-color: yellowgreen;
+          
+          
+        }
+      }
+      .project_name_fix:hover{
+        animation-name: project_name_fix_animation;
+        animation-duration: 0.5s;
+        background-color: yellowgreen;
+        cursor:pointer
+      }
+      .completed_link_fix{
+        fill: black;
+      }
+      @keyframes completed_link_fix_animation {
+        from {
+            fill: black;
+            
+            
+        }
+        to {
+          fill: rgb(102, 141, 24);
+          
+          
+        }
+      }
+      .completed_link_fix:hover{
+        fill: rgb(102, 141, 24);
+        animation-name: completed_link_fix_animation;
+        animation-duration: 0.5s;
+      }
       .death_line_fix{
         width: 6.5rem;
         padding-left: 0.5rem;
