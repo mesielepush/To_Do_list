@@ -85,10 +85,6 @@
   display: block;
 }
 
-.sidenav .project_name_sided_bar {
-  color: white;
-}
-
 .sidenav .projects_text {
   text-align: center;
   background-color: #918a8a;
@@ -98,9 +94,45 @@
   display: block;
 }
 
+@-webkit-keyframes p_names_animation {
+  from {
+    background-color: #726f6f;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+@keyframes p_names_animation {
+  from {
+    background-color: #726f6f;
+  }
+  to {
+    background-color: white;
+  }
+}
+
 .sidenav #projects {
   max-height: 10rem;
   overflow-y: hidden;
+}
+
+.sidenav #projects a {
+  color: white;
+}
+
+.sidenav #projects a:hover {
+  -webkit-animation-name: p_names_animation;
+          animation-name: p_names_animation;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.sidenav #projects::-webkit-scrollbar {
+  display: none;
 }
 
 .sidenav a:hover {

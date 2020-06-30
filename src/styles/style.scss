@@ -61,9 +61,6 @@
             display: block;
           }
     }
-    .project_name_sided_bar{
-      color:white;
-    }
     .projects_text{
         text-align: center;
         background-color: rgb(145, 138, 138);
@@ -72,9 +69,31 @@
         color: #ffffff;
         display: block;
     }
+    @keyframes p_names_animation {
+      from{
+        background-color: rgb(114, 111, 111);
+        
+      }
+      to{
+        background-color: white;
+      }
+    }
     #projects{
       max-height: 10rem;
       overflow-y: hidden;
+      a{
+        color:white;
+      }
+      a:hover{
+        animation-name: p_names_animation;
+        animation-duration: 0.5s;
+        color:black;
+        background-color: white;
+        cursor:pointer;
+      }
+    }
+    #projects::-webkit-scrollbar {
+      display: none;
     }
   }  
   .sidenav a:hover {

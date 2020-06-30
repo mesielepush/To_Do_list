@@ -35,7 +35,7 @@ const sidebar =()=>{
 
     Object.entries(localStorage).forEach((item)=>{
         const project_list_name  = `
-        <span class = 'project_name_sided_bar'>${item[0]}</span>
+        <a>${item[0]}</a>
         `
         console.log(item)
         project_list.innerHTML+= project_list_name
