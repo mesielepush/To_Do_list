@@ -1,11 +1,12 @@
 import show_step from './show_step'
 import Storage from  './storage'
 import save_step from './save_step'
+
 const show_project = (name) =>{
     const content = document.getElementById('main')
     content.innerHTML = '';
     const template = `
-                    <div class="step_div">
+                    <div class="step_div" id='step_div'>
                         <div class="allsteps_title d-flex justify-content-center align-items-center">
                             <span style='font-size:2rem'>${name}</span>
                         </div>
@@ -78,12 +79,17 @@ const show_project = (name) =>{
                 </div>
     `
     content.innerHTML+=template;
+
     const this_project = Storage.read(name)
     const steps = this_project.projectSteps
     const new_step = document.getElementById('save_step')
     new_step.addEventListener('click', function(){
-        save_step(this_project)
+        save_step(this_project),
+        show_project(name)
     })
-    console.log(steps)
+    steps.forEach((item)=>{
+        show_step(item)
+    })
+    
 }
 export default show_project
