@@ -10,7 +10,8 @@ const step = ( title, description, date,priority) => {
                 return {
                     stepTitle,
                     stepDescription,
-                    stepDate, stepPriority,
+                    stepDate,
+                    stepPriority,
                     stepProject,
                     stepStatus
                 };
