@@ -90,7 +90,7 @@
       }
     }
     #projects{
-      max-height: 10rem;
+      max-height: 25rem;
       overflow-y: hidden;
       a{
         color:white;
@@ -155,6 +155,7 @@
       background-color: rgb(232, 236, 241);
       font-family: 'Holtwood One SC', serif;
       height: 4rem;
+      margin-top: 3rem;
       border-radius: 20px!important;
       span{
         position: relative;

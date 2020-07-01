@@ -18,12 +18,7 @@ const sidebar =()=>{
                     <div id="projects" class='d-flex flex-column text-center overflow-auto'>
                         ...
                     </div>
-                    <div class="projects_text">
-                        Your Steps
-                    </div>
-                    <div id="steps">
-                        ...
-                    </div>
+                    
                 </div>
 
                 <div class="main container mt-5" id='main'>

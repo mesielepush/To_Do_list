@@ -1,5 +1,5 @@
 import Storage from './storage'
-import show_project from './show_project'
+import erase_step from './erase_step'
 const show_step = (step)=>{
     const content = document.getElementById('step_div')
     const colors = {
@@ -25,18 +25,6 @@ const show_step = (step)=>{
     
     `
     content.innerHTML += template;
-    const erase = document.getElementById(step.stepTitle)
-    const project = Storage.read(step.stepProject)
-    erase.addEventListener('click',function(){
-                            delete project.projectSteps[step.stepTitle],
-                            console.log('PROJECT:  ',project),
-                            Storage.update(project.projectName,project),
-                            console.log('NEW PROJECT:  ',project),
-                            show_project(project.projectName),false
-                                })
+    
 }
 export default show_step
-
-const project = Storage.read('To Do list in JS');
-
-Storage.update(project)

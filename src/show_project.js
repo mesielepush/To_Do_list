@@ -1,7 +1,7 @@
 import show_step from './show_step'
 import Storage from  './storage'
 import save_step from './save_step'
-
+import setListeners from './setListeners'
 const show_project = (name) =>{
     const content = document.getElementById('main')
     const this_project = Storage.read(name)
@@ -89,6 +89,7 @@ const show_project = (name) =>{
         show_step(steps[item])
         
     })
-    
+
+    setListeners()
 }
 export default show_project
