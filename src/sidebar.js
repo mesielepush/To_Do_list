@@ -1,5 +1,6 @@
-import Storage from './storage'
 import show_project from './show_project'
+import all_projects from './all_projects'
+import allsteps from './all_steps';
 const sidebar =()=>{
     const content = document.getElementById('body');
     
@@ -7,8 +8,8 @@ const sidebar =()=>{
                 
                 <div class="sidenav">
                     <div class="general">
-                        <a href="#about">All Projects</a>
-                        <a href="#services">All Steps</a>
+                        <div id="all_projects">All Projects</div>
+                        <div id="all_steps">All Steps</div>
                     </div>
                 
                     <div class="projects_text">
@@ -48,5 +49,10 @@ const sidebar =()=>{
             show_project(inside_text);
          })
     }
+    const show_all_projects = document.getElementById('all_projects')
+    show_all_projects.addEventListener('click',function(){
+        all_projects();
+     });
+
 };
 export default sidebar

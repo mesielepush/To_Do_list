@@ -24,7 +24,9 @@ const Storage = (()=>{
         }
         return false;
       };
-    const all_projects = () => Object.keys(localStorage)
+    const all_projects = () => {
+        return Object.entries(localStorage)
+    }
     return{ 
         create, erase, read, update, all_projects
     }

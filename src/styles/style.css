@@ -78,19 +78,28 @@
   margin-bottom: 3rem;
 }
 
-.sidenav .general a {
-  padding: 6px 8px 6px 16px;
+.sidenav .general div {
+  position: relative;
+  top: -3.5rem;
+  margin-left: 1rem;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-family: 'Holtwood One SC', serif;
+  font-size: 1rem;
+  color: #f3eaea;
   display: block;
+}
+
+.sidenav .general div:hover {
+  color: #6ad324;
+  cursor: pointer;
 }
 
 .sidenav .projects_text {
   text-align: center;
   background-color: #918a8a;
   margin-top: 1rem;
-  font-size: 20px;
+  font-size: 1rem;
+  font-family: 'Holtwood One SC', serif;
   color: #ffffff;
   display: block;
 }
@@ -211,6 +220,56 @@
   left: -2.5rem;
 }
 
+@-webkit-keyframes all_projects_animation {
+  from {
+    background-color: #ebe3ce;
+    color: #080000;
+  }
+  to {
+    background-color: #bfd890;
+    color: #080000;
+    -webkit-box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
+@keyframes all_projects_animation {
+  from {
+    background-color: #ebe3ce;
+    color: #080000;
+  }
+  to {
+    background-color: #bfd890;
+    color: #080000;
+    -webkit-box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.step_div .allprojects_title {
+  background-color: #ebe3ce;
+  font-family: 'Holtwood One SC', serif;
+  height: 4rem;
+  border-radius: 20px !important;
+}
+
+.step_div .allprojects_title span {
+  position: relative;
+  left: -2.5rem;
+}
+
+.step_div .allprojects_title:hover {
+  -webkit-animation-name: all_projects_animation;
+          animation-name: all_projects_animation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  color: #080000;
+  background-color: #bfd890;
+  -webkit-box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
 .step_div .single_step {
   height: 2rem;
   margin-bottom: 0.5rem;
@@ -304,6 +363,12 @@
 
 .step_div .single_step .step_name_fix {
   width: 45rem;
+  background-color: #e6dcdc;
+  font-family: 'Holtwood One SC', serif;
+}
+
+.step_div .single_step .project_desc_fix {
+  width: 100% !important;
   background-color: #e6dcdc;
   font-family: 'Holtwood One SC', serif;
 }
