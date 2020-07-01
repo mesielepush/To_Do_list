@@ -5,6 +5,7 @@ import save_step from './save_step'
 const show_project = (name) =>{
     const content = document.getElementById('main')
     const this_project = Storage.read(name)
+    console.log('ONE;;;;')
     content.innerHTML = '';
     const template = `
                     <div class="step_div" id='step_div'>
@@ -74,6 +75,7 @@ const show_project = (name) =>{
 
     
     const steps = this_project.projectSteps
+    console.log('RENDER PROJECT STEPS: ',steps)
     const new_step = document.getElementById('save_step')
     new_step.addEventListener('click', function(){
         save_step(this_project),
@@ -85,7 +87,7 @@ const show_project = (name) =>{
       })
     sorted_steps.forEach((item)=>{
         show_step(steps[item])
-        console.log(steps[item])
+        
     })
     
 }

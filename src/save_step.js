@@ -1,6 +1,7 @@
 import step from './step'
 import navbar from './navbar'
 import Storage from './storage'
+import Project from './projects';
 const save_step = (project)=>{
     function cleanForm() {
         const fields = ['step-name','step-description','death_line_step','priority_step'];

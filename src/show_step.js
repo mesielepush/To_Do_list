@@ -1,4 +1,5 @@
-
+import Storage from './storage'
+import show_project from './show_project'
 const show_step = (step)=>{
     const content = document.getElementById('step_div')
     const colors = {
@@ -11,7 +12,7 @@ const show_step = (step)=>{
         <div class="project_name d-flex justify-content-center align-items-center">${step.stepTitle}</div>
         <div class="step_name d-flex justify-content-center align-items-center">${step.stepDescription}</div>
         
-        <div class="completed_link_fix d-flex align-items-center">
+        <div id='${step.stepTitle}' class="completed_link_fix d-flex align-items-center">
             <svg width="32" height="32" viewBox="0 0 145.4 145.4">
                 
                 <path d="M72.7,0a72.7,72.7,0,1,0,72.7,72.7A72.7,72.7,0,0,0,72.7,0Zm41.5,55.43L68.66,101.84a7.56,7.56,0,0,1-10.77,0L31.23,75a7.57,7.57,0,0,1,.08-10.74l1.17-1.14a7.56,7.56,0,0,1,10.6,0L57.66,77.59a7.57,7.57,0,0,0,10.68,0l33.82-34a7.57,7.57,0,0,1,10.72,0l1.27,1.27A7.58,7.58,0,0,1,114.2,55.43Z"/>
@@ -24,6 +25,18 @@ const show_step = (step)=>{
     
     `
     content.innerHTML += template;
-    
+    const erase = document.getElementById(step.stepTitle)
+    const project = Storage.read(step.stepProject)
+    erase.addEventListener('click',function(){
+                            delete project.projectSteps[step.stepTitle],
+                            console.log('PROJECT:  ',project),
+                            Storage.update(project.projectName,project),
+                            console.log('NEW PROJECT:  ',project),
+                            show_project(project.projectName),false
+                                })
 }
 export default show_step
+
+const project = Storage.read('To Do list in JS');
+
+Storage.update(project)

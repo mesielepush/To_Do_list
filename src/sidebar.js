@@ -1,6 +1,6 @@
 import show_project from './show_project'
 import all_projects from './all_projects'
-import allsteps from './all_steps';
+import all_steps from './all_steps';
 const sidebar =()=>{
     const content = document.getElementById('body');
     
@@ -53,6 +53,9 @@ const sidebar =()=>{
     show_all_projects.addEventListener('click',function(){
         all_projects();
      });
-
+    const show_all_steps = document.getElementById('all_steps')
+    show_all_steps.addEventListener('click',function(){
+        all_steps();
+     });
 };
 export default sidebar
