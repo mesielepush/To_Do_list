@@ -1,8 +1,9 @@
+/* eslint-disable import/no-cycle */
 import project from './projects';
 import Storage from './storage';
 import navbar from './navbar';
 
-const save_project = () => {
+const saveProject = () => {
   function cleanForm() {
     const fields = ['project-name', 'project-description'];
     fields.forEach((item) => {
@@ -11,10 +12,10 @@ const save_project = () => {
   }
 
   const one = project;
-  const p_name = document.querySelector('#project-name').value;
-  const p_description = document.querySelector('#project-description').value;
-  one.projectName = p_name;
-  one.projectDescription = p_description;
+  const pName = document.querySelector('#project-name').value;
+  const pDescription = document.querySelector('#project-description').value;
+  one.projectName = pName;
+  one.projectDescription = pDescription;
   cleanForm();
   Storage.create(one.projectName, one);
 
@@ -22,4 +23,4 @@ const save_project = () => {
 };
 
 
-export default save_project;
+export default saveProject;

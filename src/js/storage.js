@@ -10,6 +10,7 @@ const Storage = (() => {
     if (Object.keys(localStorage).includes(key)) {
       return JSON.parse(localStorage.getItem(key));
     }
+    return false;
   };
   const erase = (key) => {
     if (Object.keys(localStorage).includes(key)) {
@@ -24,9 +25,9 @@ const Storage = (() => {
     }
     return false;
   };
-  const all_projects = () => Object.entries(localStorage);
+
   return {
-    create, erase, read, update, all_projects,
+    create, erase, read, update,
   };
 })();
 

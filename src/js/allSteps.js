@@ -1,5 +1,6 @@
+/* eslint-disable import/no-cycle */
 import Storage from './storage';
-import show_step from './show_step';
+import showStep from './showStep';
 import setListeners from './setListeners';
 
 const allsteps = () => {
@@ -16,18 +17,18 @@ const allsteps = () => {
 
   content.innerHTML += template;
   Object.entries(localStorage).forEach((item) => {
-    const steps_content = document.getElementById('step_div');
-    const project_name = item[0];
-    const project_steps = Storage.read(item[0]).projectSteps;
-    const render_project = `
+    const stepsContent = document.getElementById('step_div');
+    const projectName = item[0];
+    const { projectSteps } = Storage.read(item[0]);
+    const renderProject = `
                             <div class="allsteps_title d-flex justify-content-center align-items-center mt5">
-                                <span>${project_name}</span>
+                                <span>${projectName}</span>
                             </div>   
         `;
-    steps_content.innerHTML += render_project;
-    const keys_ = Object.keys(project_steps);
-    for (let i = 0; i < Object.keys(project_steps).length; i++) {
-      show_step(project_steps[keys_[i]]);
+    stepsContent.innerHTML += renderProject;
+    const keys = Object.keys(projectSteps);
+    for (let i = 0; i < Object.keys(projectSteps).length; i += 1) {
+      showStep(projectSteps[keys[i]]);
     }
     setListeners();
   });

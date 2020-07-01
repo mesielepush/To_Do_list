@@ -1,12 +1,15 @@
-import show_step from './show_step';
+/* eslint-disable no-sequences */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable import/no-cycle */
 import Storage from './storage';
-import save_step from './save_step';
 import setListeners from './setListeners';
-import erase_project from './erase_project';
+import eraseProject from './eraseProject';
+import showStep from './showStep';
+import saveStep from './saveStep';
 
-const show_project = (name) => {
+const showProject = (name) => {
   const content = document.getElementById('main');
-  const this_project = Storage.read(name);
+  const thisProject = Storage.read(name);
 
   content.innerHTML = '';
   const template = `
@@ -16,7 +19,7 @@ const show_project = (name) => {
                         </div>
                         <div class="single_step d-flex align-items-center" style='margin-bottom: 3rem;'>
                             <div class="project_name_fix d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#new_step_modal" id='new_step'>NewStep</div>
-                            <div class="step_name_fix d-flex justify-content-center align-items-center">${this_project.projectDescription}</div>
+                            <div class="step_name_fix d-flex justify-content-center align-items-center">${thisProject.projectDescription}</div>
                             
                             <div class="completed_link d-flex align-items-center" id='${name}'>
                                 <svg width="32" height="32" viewBox="0 0 145.4 145.4" >
@@ -76,22 +79,21 @@ const show_project = (name) => {
   content.innerHTML += template;
 
 
-  const steps = this_project.projectSteps;
-
-  const new_step = document.getElementById('save_step');
-  new_step.addEventListener('click', () => {
-    save_step(this_project),
-    show_project(name);
+  const steps = thisProject.projectSteps;
+  const newStep = document.getElementById('save_step');
+  newStep.addEventListener('click', () => {
+    saveStep(thisProject), showProject(name);
   });
 
-  const sorted_steps = Object.keys(steps).sort((a, b) => new Date(steps[a].stepDate) - new Date(steps[b].stepDate));
-  sorted_steps.forEach((item) => {
-    show_step(steps[item]);
+  // eslint-disable-next-line max-len
+  const sortedSteps = Object.keys(steps).sort((a, b) => new Date(steps[a].stepDate) - new Date(steps[b].stepDate));
+  sortedSteps.forEach((item) => {
+    showStep(steps[item]);
   });
   setListeners();
-  const to_delete = document.getElementById(name);
-  to_delete.addEventListener('click', () => {
-    erase_project(name);
+  const toDelete = document.getElementById(name);
+  toDelete.addEventListener('click', () => {
+    eraseProject(name);
   });
 };
-export default show_project;
+export default showProject;

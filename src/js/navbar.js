@@ -1,4 +1,5 @@
-import saves from './save_project';
+/* eslint-disable import/no-cycle */
+import saves from './saveProject';
 import sidebar from './sidebar';
 
 const navbar = () => {

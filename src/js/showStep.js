@@ -1,7 +1,4 @@
-import Storage from './storage';
-import erase_step from './erase_step';
-
-const show_step = (step) => {
+const showStep = (step) => {
   const content = document.getElementById('step_div');
   const colors = {
     high: 'background-color:rgba(236, 15, 15, 0.6)',
@@ -27,4 +24,4 @@ const show_step = (step) => {
     `;
   content.innerHTML += template;
 };
-export default show_step;
+export default showStep;

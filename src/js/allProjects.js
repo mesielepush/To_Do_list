@@ -1,10 +1,11 @@
 /* eslint-disable import/no-cycle */
 import Storage from './storage';
-import show_project from './show_project';
-import erase_project from './erase_project';
+// eslint-disable-next-line import/no-named-as-default-member
+import showProject from './showProject';
+import eraseProject from './eraseProject';
 import navbar from './navbar';
 
-const all_projects = () => {
+const allProjects = () => {
   navbar();
   const content = document.getElementById('main');
   content.innerHTML = '';
@@ -12,7 +13,7 @@ const all_projects = () => {
   Object.entries(localStorage).forEach((item) => {
     const project = Storage.read(item[0]);
 
-    const project_show = `
+    const projectShow = `
         <div class="step_div " id='step_div'>
             <div class="allprojects_title d-flex justify-content-center align-items-center" id='${project.projectName}'>
                 <span style='font-size:2rem' >${project.projectName}</span>
@@ -33,21 +34,21 @@ const all_projects = () => {
             
         </div>
         `;
-    content.innerHTML += project_show;
+    content.innerHTML += projectShow;
   });
   const projects = document.getElementsByClassName('allprojects_title');
-  for (var i = 0; i < projects.length; i++) {
+  for (let i = 0; i < projects.length; i += 1) {
     const name = projects[i].id;
     projects[i].addEventListener('click', () => {
-      show_project(name);
+      showProject(name);
     });
   }
-  for (var i = 0; i < projects.length; i++) {
+  for (let i = 0; i < projects.length; i += 1) {
     const name = projects[i].id;
-    const to_delete = document.getElementById(`delete_${name}`);
-    to_delete.addEventListener('click', () => {
-      erase_project(name);
+    const toDelete = document.getElementById(`delete_${name}`);
+    toDelete.addEventListener('click', () => {
+      eraseProject(name);
     });
   }
 };
-export default all_projects;
+export default allProjects;
