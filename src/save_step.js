@@ -1,5 +1,6 @@
 import step from './step'
 import navbar from './navbar'
+import Storage from './storage'
 const save_step = (project)=>{
     function cleanForm() {
         const fields = ['step-name','step-description','death_line_step','priority_step'];
@@ -14,12 +15,9 @@ const save_step = (project)=>{
       const s_priority = document.querySelector("#priority_step").value;
       const one = step(s_name,s_description,s_death_line,s_priority);
       cleanForm();
-      console.log('LOG NAME',project.projectName)
       one.stepProject = project.projectName
       project.projectSteps.push(one)
-      
-      
-      console.log(project)
+      Storage.update(project.projectName,project)
       navbar()
     
 };
