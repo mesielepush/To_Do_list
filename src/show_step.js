@@ -1,6 +1,11 @@
 
 const show_step = (step)=>{
     const content = document.getElementById('step_div')
+    const colors = {
+        high:`background-color:rgba(236, 15, 15, 0.6)`,
+        moderate:"background-color:rgba(243, 114, 9, 0.6)",
+        low:"background-color:rgba(52, 228, 190, 0.4)"
+    }
     const template = `
     <div class="single_step d-flex align-items-center">
         <div class="project_name d-flex justify-content-center align-items-center">${step.stepTitle}</div>
@@ -22,8 +27,8 @@ const show_step = (step)=>{
                 
             </svg>
         </div>
-        <div class="death_line d-flex align-items-center">${step.stepDate}</div>
-        <div class="priority d-flex justify-content-center align-items-center">${step.stepPriority}</div>
+        <div class="death_line d-flex justify-content-center align-items-center">${step.stepDate}</div>
+        <div class="priority d-flex justify-content-center align-items-center" style="${colors[step.stepPriority]}">${step.stepPriority}</div>
     </div>
     
     `
