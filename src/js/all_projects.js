@@ -1,16 +1,18 @@
-import Storage from './storage'
-import show_project from './show_project'
-import erase_project from './erase_project'
-import navbar from './navbar'
-const all_projects = ()=>{
-    navbar()
-    const content = document.getElementById('main')
-    content.innerHTML = '';
+/* eslint-disable import/no-cycle */
+import Storage from './storage';
+import show_project from './show_project';
+import erase_project from './erase_project';
+import navbar from './navbar';
 
-    Object.entries(localStorage).forEach((item)=>{
-        const project = Storage.read(item[0])
+const all_projects = () => {
+  navbar();
+  const content = document.getElementById('main');
+  content.innerHTML = '';
 
-        const project_show  = `
+  Object.entries(localStorage).forEach((item) => {
+    const project = Storage.read(item[0]);
+
+    const project_show = `
         <div class="step_div " id='step_div'>
             <div class="allprojects_title d-flex justify-content-center align-items-center" id='${project.projectName}'>
                 <span style='font-size:2rem' >${project.projectName}</span>
@@ -30,23 +32,22 @@ const all_projects = ()=>{
             </div>
             
         </div>
-        `
-        content.innerHTML+= project_show
-    })
-    const projects = document.getElementsByClassName('allprojects_title');
-    for (var i = 0; i < projects.length; i++) {
-        const name = projects[i].id
-        projects[i].addEventListener('click', function(){
-            show_project(name);
-         })
-    }
-    for (var i = 0; i < projects.length; i++) {
-        const name = projects[i].id
-        const to_delete = document.getElementById(`delete_${name}`)
-        to_delete.addEventListener('click', function(){
-            erase_project(name);
-         })
-    }
-
-}
-export default all_projects
+        `;
+    content.innerHTML += project_show;
+  });
+  const projects = document.getElementsByClassName('allprojects_title');
+  for (var i = 0; i < projects.length; i++) {
+    const name = projects[i].id;
+    projects[i].addEventListener('click', () => {
+      show_project(name);
+    });
+  }
+  for (var i = 0; i < projects.length; i++) {
+    const name = projects[i].id;
+    const to_delete = document.getElementById(`delete_${name}`);
+    to_delete.addEventListener('click', () => {
+      erase_project(name);
+    });
+  }
+};
+export default all_projects;

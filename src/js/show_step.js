@@ -1,13 +1,14 @@
-import Storage from './storage'
-import erase_step from './erase_step'
-const show_step = (step)=>{
-    const content = document.getElementById('step_div')
-    const colors = {
-        high:`background-color:rgba(236, 15, 15, 0.6)`,
-        moderate:"background-color:rgba(243, 114, 9, 0.6)",
-        low:"background-color:rgba(52, 228, 190, 0.4)"
-    }
-    const template = `
+import Storage from './storage';
+import erase_step from './erase_step';
+
+const show_step = (step) => {
+  const content = document.getElementById('step_div');
+  const colors = {
+    high: 'background-color:rgba(236, 15, 15, 0.6)',
+    moderate: 'background-color:rgba(243, 114, 9, 0.6)',
+    low: 'background-color:rgba(52, 228, 190, 0.4)',
+  };
+  const template = `
     <div class="single_step d-flex align-items-center">
         <div class="project_name d-flex justify-content-center align-items-center">${step.stepTitle}</div>
         <div class="step_name d-flex justify-content-center align-items-center">${step.stepDescription}</div>
@@ -23,8 +24,7 @@ const show_step = (step)=>{
         <div class="priority d-flex justify-content-center align-items-center" style="${colors[step.stepPriority]}">${step.stepPriority}</div>
     </div>
     
-    `
-    content.innerHTML += template;
-    
-}
-export default show_step
+    `;
+  content.innerHTML += template;
+};
+export default show_step;

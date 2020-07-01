@@ -1,10 +1,11 @@
-import show_project from './show_project'
-import all_projects from './all_projects'
+import show_project from './show_project';
+import all_projects from './all_projects';
 import all_steps from './all_steps';
-const sidebar =()=>{
-    const content = document.getElementById('body');
-    
-    const template = `
+
+const sidebar = () => {
+  const content = document.getElementById('body');
+
+  const template = `
                 
                 <div class="sidenav">
                     <div class="general">
@@ -25,32 +26,32 @@ const sidebar =()=>{
                     
                 </div>
 
-    `
-    content.innerHTML += template
+    `;
+  content.innerHTML += template;
 
-    const project_list = document.getElementById('projects');
+  const project_list = document.getElementById('projects');
 
-    Object.entries(localStorage).forEach((item)=>{
-        const project_list_name  = `
+  Object.entries(localStorage).forEach((item) => {
+    const project_list_name = `
         <a class = 'projects_link'>${item[0]}</a>
-        `
-        project_list.innerHTML+= project_list_name
-    }) 
+        `;
+    project_list.innerHTML += project_list_name;
+  });
 
-    const projects = document.getElementsByClassName('projects_link');
-    for (var i = 0; i < projects.length; i++) {
-        const inside_text = projects[i].textContent
-        projects[i].addEventListener('click', function(){
-            show_project(inside_text);
-         })
-    }
-    const show_all_projects = document.getElementById('all_projects')
-    show_all_projects.addEventListener('click',function(){
-        all_projects();
-     });
-    const show_all_steps = document.getElementById('all_steps')
-    show_all_steps.addEventListener('click',function(){
-        all_steps();
-     });
+  const projects = document.getElementsByClassName('projects_link');
+  for (let i = 0; i < projects.length; i++) {
+    const inside_text = projects[i].textContent;
+    projects[i].addEventListener('click', () => {
+      show_project(inside_text);
+    });
+  }
+  const show_all_projects = document.getElementById('all_projects');
+  show_all_projects.addEventListener('click', () => {
+    all_projects();
+  });
+  const show_all_steps = document.getElementById('all_steps');
+  show_all_steps.addEventListener('click', () => {
+    all_steps();
+  });
 };
-export default sidebar
+export default sidebar;

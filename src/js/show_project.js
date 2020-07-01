@@ -1,14 +1,15 @@
-import show_step from './show_step'
-import Storage from  './storage'
-import save_step from './save_step'
-import setListeners from './setListeners'
-import erase_project from './erase_project'
-const show_project = (name) =>{
-    const content = document.getElementById('main')
-    const this_project = Storage.read(name)
-    
-    content.innerHTML = '';
-    const template = `
+import show_step from './show_step';
+import Storage from './storage';
+import save_step from './save_step';
+import setListeners from './setListeners';
+import erase_project from './erase_project';
+
+const show_project = (name) => {
+  const content = document.getElementById('main');
+  const this_project = Storage.read(name);
+
+  content.innerHTML = '';
+  const template = `
                     <div class="step_div" id='step_div'>
                         <div class="allsteps_title d-flex justify-content-center align-items-center">
                             <span style='font-size:2rem'>${name}</span>
@@ -71,28 +72,26 @@ const show_project = (name) =>{
                             </div>
                         </div>
                 </div>
-    `
-    content.innerHTML+=template;
+    `;
+  content.innerHTML += template;
 
-    
-    const steps = this_project.projectSteps
-    
-    const new_step = document.getElementById('save_step')
-    new_step.addEventListener('click', function(){
-        save_step(this_project),
-        show_project(name)
-    })
-    
-    var sorted_steps = Object.keys(steps).sort(function(a, b) {
-        return new Date(steps[a].stepDate) - new Date(steps[b].stepDate)
-      })
-    sorted_steps.forEach((item)=>{
-        show_step(steps[item])
-    })
-    setListeners()
-    const to_delete = document.getElementById(name)
-    to_delete.addEventListener('click', function(){
-        erase_project(name);
-        })
-}
-export default show_project
+
+  const steps = this_project.projectSteps;
+
+  const new_step = document.getElementById('save_step');
+  new_step.addEventListener('click', () => {
+    save_step(this_project),
+    show_project(name);
+  });
+
+  const sorted_steps = Object.keys(steps).sort((a, b) => new Date(steps[a].stepDate) - new Date(steps[b].stepDate));
+  sorted_steps.forEach((item) => {
+    show_step(steps[item]);
+  });
+  setListeners();
+  const to_delete = document.getElementById(name);
+  to_delete.addEventListener('click', () => {
+    erase_project(name);
+  });
+};
+export default show_project;

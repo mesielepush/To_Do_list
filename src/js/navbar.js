@@ -1,10 +1,11 @@
-import saves from './save_project'
-import sidebar from './sidebar'
-const navbar = ()=>{
-    const content = document.getElementById('body');
-    content.innerHTML='';
-    
-    const template = `
+import saves from './save_project';
+import sidebar from './sidebar';
+
+const navbar = () => {
+  const content = document.getElementById('body');
+  content.innerHTML = '';
+
+  const template = `
                 <nav class="navbar d-flex justify-content-center">
                     <a class="navbar-brand" href="#">easy2do</a>
                     <a class="new_buttton d-flex justify-content-center align-items-center" id = 'new_project' data-toggle="modal" data-target="#new_project_modal"> NEW </a>
@@ -40,13 +41,12 @@ const navbar = ()=>{
                     </div>
                     </div>
                 </div>
-    `
-    content.innerHTML += template
-    sidebar()
-    const start = document.getElementById('save')
-    start.addEventListener('click',function(){
-        saves();
-     });   
-    
+    `;
+  content.innerHTML += template;
+  sidebar();
+  const start = document.getElementById('save');
+  start.addEventListener('click', () => {
+    saves();
+  });
 };
-export default navbar
+export default navbar;
