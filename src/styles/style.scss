@@ -82,11 +82,16 @@
     }
     @keyframes p_names_animation {
       from{
-        background-color: rgb(114, 111, 111);
-        
+        background-color: #726f6f;
+        color:rgb(32, 31, 48);
+        font-weight: 400;
+        border-bottom: 1px solid #31e60d;
       }
       to{
         background-color: white;
+        color:rgb(0, 0, 0);
+        font-weight: 900;
+        border-bottom: 5px solid #31e60d;
       }
     }
     #projects{
@@ -94,14 +99,20 @@
       overflow-y: hidden;
       a{
         color:white;
+        
+        margin-bottom: 1rem;
+        font-family: 'MuseoModerno', cursive;
       }
       a:hover{
         animation-name: p_names_animation;
-        animation-duration: 0.5s;
-        color:black;
+        animation-duration: 1s;
+        color:rgb(0, 0, 0);
         background-color: white;
+        font-weight: 900;
         cursor:pointer;
+        border-bottom: 5px solid #31e60d;
       }
+      
     }
     #projects::-webkit-scrollbar {
       display: none;

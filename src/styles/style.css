@@ -107,38 +107,54 @@
 @-webkit-keyframes p_names_animation {
   from {
     background-color: #726f6f;
+    color: #201f30;
+    font-weight: 400;
+    border-bottom: 1px solid #31e60d;
   }
   to {
     background-color: white;
+    color: black;
+    font-weight: 900;
+    border-bottom: 5px solid #31e60d;
   }
 }
 
 @keyframes p_names_animation {
   from {
     background-color: #726f6f;
+    color: #201f30;
+    font-weight: 400;
+    border-bottom: 1px solid #31e60d;
   }
   to {
     background-color: white;
+    color: black;
+    font-weight: 900;
+    border-bottom: 5px solid #31e60d;
   }
 }
 
 .sidenav #projects {
-  max-height: 10rem;
+  max-height: 25rem;
   overflow-y: hidden;
 }
 
 .sidenav #projects a {
   color: white;
+  margin-bottom: 1rem;
+  font-family: 'MuseoModerno', cursive;
 }
 
 .sidenav #projects a:hover {
   -webkit-animation-name: p_names_animation;
           animation-name: p_names_animation;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   color: black;
   background-color: white;
+  font-weight: 900;
   cursor: pointer;
+  border-bottom: 5px solid #31e60d;
 }
 
 .sidenav #projects::-webkit-scrollbar {
@@ -212,6 +228,7 @@
   background-color: #e8ecf1;
   font-family: 'Holtwood One SC', serif;
   height: 4rem;
+  margin-top: 3rem;
   border-radius: 20px !important;
 }
 
@@ -279,7 +296,7 @@
   width: 11rem;
   background-color: #e8ecf1;
   font-family: 'Holtwood One SC', serif;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .step_div .single_step .project_name_fix {
