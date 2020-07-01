@@ -2,7 +2,7 @@
 const Project = ((name, description) =>{
     const projectName = name;
     const projectDescription = description;
-    const projectSteps = [];
+    const projectSteps = {};
 
     return {
         projectName,

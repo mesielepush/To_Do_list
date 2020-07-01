@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 @-webkit-keyframes new_buttton_animation {
   from {
     background-color: white;
@@ -218,6 +219,8 @@
 .step_div .single_step .project_name {
   width: 11rem;
   background-color: #e8ecf1;
+  font-family: 'Holtwood One SC', serif;
+  font-size: 0.8rem;
 }
 
 .step_div .single_step .project_name_fix {
@@ -295,11 +298,13 @@
 .step_div .single_step .step_name {
   width: 45rem;
   background-color: whitesmoke;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
 }
 
 .step_div .single_step .step_name_fix {
   width: 45rem;
-  background-color: whitesmoke;
+  background-color: #e6dcdc;
   font-family: 'Holtwood One SC', serif;
 }
 

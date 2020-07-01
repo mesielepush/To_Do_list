@@ -16,7 +16,7 @@ const save_step = (project)=>{
       const one = step(s_name,s_description,s_death_line,s_priority);
       cleanForm();
       one.stepProject = project.projectName
-      project.projectSteps.push(one)
+      project.projectSteps[s_name] = one
       Storage.update(project.projectName,project)
       navbar()
     
