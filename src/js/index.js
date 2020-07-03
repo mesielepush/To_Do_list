@@ -4,7 +4,7 @@ import navbar from './navbar';
 import Project from './projects';
 
 navbar();
-localStorage.clear()
+localStorage.clear();
 const stepOne = {
   stepTitle: 'Design UI',
   stepDescription: 'Make a general structure for the interface',
