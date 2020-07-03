@@ -7,7 +7,7 @@ It's implemented completely on JavaScript, it keeps the data trough localStorage
 
 ## Instructions
 
-To use it just download this repository and open the index.html on your favorite browser. Since this uses localStorage you have to be careful if you use another web application that also uses localStorage, since your data may corrupt with data from the other app.
+To use it just download this repository and open the index.html on your favorite browser. Since this uses localStorage you have to be careful if you use another web application that also uses localStorage, since your data may corrupt with data from the other app. If you face any problems try to open it in a incognito tap.
 ## Issues
 [Issues page](https://github.com/mesielepush/Js_tictactoe/issues)  
 

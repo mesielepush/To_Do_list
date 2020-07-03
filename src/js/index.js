@@ -4,7 +4,7 @@ import navbar from './navbar';
 import Project from './projects';
 
 navbar();
-
+localStorage.clear()
 const stepOne = {
   stepTitle: 'Design UI',
   stepDescription: 'Make a general structure for the interface',
@@ -76,4 +76,4 @@ two.projectSteps = {
   'Play 10': stepThreeOne,
 };
 
-Storage.create(one.projectName, one);
+Storage.create(two.projectName, two);
