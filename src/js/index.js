@@ -31,7 +31,7 @@ const stepThree = {
 };
 
 const one = Project;
-one.projectName = 'ToDo list on JS';
+one.projectName = 'ToDo THING on JS';
 one.projectDescription = 'Make a To Do list on JS';
 one.projectSteps = {
   'Design UI': stepOne,
