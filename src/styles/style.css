@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+@-webkit-keyframes new_buttton_animation {
+  from {
+    background-color: white;
+    width: 4rem;
+    height: 3rem;
+  }
+
+  to {
+    background-color: yellowgreen;
+    width: 4.5rem;
+    height: 3.5rem;
+  }
+}
+
+@keyframes new_buttton_animation {
+  from {
+    background-color: white;
+    width: 4rem;
+    height: 3rem;
+  }
+
+  to {
+    background-color: yellowgreen;
+    width: 4.5rem;
+    height: 3.5rem;
+  }
+}
+
+.navbar {
+  height: 5rem;
+  background-color: #111;
+}
+
+.navbar .navbar-brand {
+  font-size: 2.5rem;
+  position: relative;
+  left: 3rem;
+  font-family: 'Piedra', cursive;
+  color: #f0eddb;
+}
+
+.navbar .new_buttton {
+  position: absolute;
+  right: 5rem;
+  background-color: white;
+  width: 4rem;
+  height: 3rem;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: 'Acme', sans-serif;
+}
+
+.navbar .new_buttton:hover {
+  -webkit-animation-name: new_buttton_animation;
+  animation-name: new_buttton_animation;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  background-color: yellowgreen;
+  width: 4.5rem;
+  height: 3.5rem;
+  cursor: cell;
+}
+
+@-webkit-keyframes example {
+  from {
+    background-color: black;
+    color: #080000;
+    -webkit-box-shadow: 0 0 68px 89px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 68px 89px rgba(0, 0, 0, 0.75);
+  }
+
+  to {
+    background-color: grey;
+    color: #f0eddb;
+    -webkit-box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+  }
+}
+
+@keyframes example {
+  from {
+    background-color: black;
+    color: #080000;
+    -webkit-box-shadow: 0 0 68px 89px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 68px 89px rgba(0, 0, 0, 0.75);
+  }
+
+  to {
+    background-color: grey;
+    color: #f0eddb;
+    -webkit-box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+  }
+}
+
+.nothing_here {
+  padding: 2rem;
+  background-color: grey;
+  margin-top: 11rem;
+  color: #f0eddb;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'MuseoModerno', cursive;
+  -webkit-animation-name: example;
+  animation-name: example;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+}
+
+.step_div {
+  width: 100%;
+  position: relative;
+  left: 5rem;
+  height: auto;
+}
+
+.step_div div {
+  border: 1px solid black;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.step_div .allsteps_title {
+  background-color: #e8ecf1;
+  font-family: 'Holtwood One SC', serif;
+  height: 4rem;
+  margin-top: 3rem;
+  border-radius: 20px !important;
+}
+
+.step_div .allsteps_title span {
+  position: relative;
+  left: -2.5rem;
+}
+
+@-webkit-keyframes all_projects_animation {
+  from {
+    background-color: #ebe3ce;
+    color: #080000;
+  }
+
+  to {
+    background-color: #bfd890;
+    color: #080000;
+    -webkit-box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+  }
+}
+
+@keyframes all_projects_animation {
+  from {
+    background-color: #ebe3ce;
+    color: #080000;
+  }
+
+  to {
+    background-color: #bfd890;
+    color: #080000;
+    -webkit-box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+  }
+}
+
+.step_div .allprojects_title {
+  background-color: #ebe3ce;
+  font-family: 'Holtwood One SC', serif;
+  height: 4rem;
+  border-radius: 20px !important;
+}
+
+.step_div .allprojects_title span {
+  position: relative;
+  left: -2.5rem;
+}
+
+.step_div .allprojects_title:hover {
+  -webkit-animation-name: all_projects_animation;
+  animation-name: all_projects_animation;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  color: #080000;
+  background-color: #bfd890;
+  -webkit-box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 68px 0 rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.step_div .single_step {
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.step_div .single_step .project_name {
+  width: 11rem;
+  background-color: #e8ecf1;
+  font-family: 'Holtwood One SC', serif;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.step_div .single_step .project_name_fix {
+  width: 11rem;
+  background-color: #e8ecf1;
+  font-family: 'Holtwood One SC', serif;
+}
+
+@-webkit-keyframes project_name_fix_animation {
+  from {
+    background-color: #f5efef;
+  }
+
+  to {
+    background-color: yellowgreen;
+  }
+}
+
+@keyframes project_name_fix_animation {
+  from {
+    background-color: #f5efef;
+  }
+
+  to {
+    background-color: yellowgreen;
+  }
+}
+
+.step_div .single_step .project_name_fix:hover {
+  -webkit-animation-name: project_name_fix_animation;
+  animation-name: project_name_fix_animation;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+
+.step_div .single_step .completed_link_fix {
+  fill: black;
+}
+
+@-webkit-keyframes completed_link_fix_animation {
+  from {
+    fill: black;
+  }
+
+  to {
+    fill: #668d18;
+  }
+}
+
+@keyframes completed_link_fix_animation {
+  from {
+    fill: black;
+  }
+
+  to {
+    fill: #668d18;
+  }
+}
+
+.step_div .single_step .completed_link_fix:hover {
+  fill: #668d18;
+  cursor: pointer;
+  -webkit-animation-name: completed_link_fix_animation;
+  animation-name: completed_link_fix_animation;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.step_div .single_step .death_line_fix {
+  width: 6.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.7rem;
+  font-family: 'Holtwood One SC', serif;
+  background-color: #e8ecf1;
+}
+
+.step_div .single_step .step_name {
+  width: 45rem;
+  background-color: whitesmoke;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.1rem;
+}
+
+.step_div .single_step .step_name_fix {
+  width: 45rem;
+  background-color: #e6dcdc;
+  font-family: 'Holtwood One SC', serif;
+}
+
+.step_div .single_step .project_desc_fix {
+  width: 100% !important;
+  background-color: #e6dcdc;
+  font-family: 'Holtwood One SC', serif;
+}
+
+.step_div .single_step .priority {
+  width: 6rem;
+  font-family: 'Holtwood One SC', serif;
+  font-size: 0.7rem;
+}
+
+.step_div .single_step .priority_fix {
+  width: 6rem;
+  font-family: 'Holtwood One SC', serif;
+  background-color: #e8ecf1;
+  font-size: 0.8rem;
+}
+
+.step_div .single_step .erase_link {
+  background-color: whitesmoke;
+}
+
+.step_div .single_step .completed_link {
+  background-color: whitesmoke;
+}
+
+.step_div .single_step .completed_link:hover {
+  cursor: pointer;
+}
+
+.step_div .single_step .death_line {
+  background-color: whitesmoke;
+  width: 6.5rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 5rem;
+}
+
+.sidenav .general {
+  margin-bottom: 3rem;
+}
+
+.sidenav .general div {
+  position: relative;
+  top: -3.5rem;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-family: 'Holtwood One SC', serif;
+  font-size: 1rem;
+  color: #f3eaea;
+  display: block;
+}
+
+.sidenav .general div:hover {
+  color: #6ad324;
+  cursor: pointer;
+}
+
+.sidenav .projects_text {
+  text-align: center;
+  background-color: #918a8a;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: 'Holtwood One SC', serif;
+  color: #fff;
+  display: block;
+}
+
+@-webkit-keyframes p_names_animation {
+  from {
+    background-color: #726f6f;
+    color: #201f30;
+    font-weight: 400;
+    border-bottom: 1px solid #31e60d;
+  }
+
+  to {
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    border-bottom: 5px solid #31e60d;
+  }
+}
+
+@keyframes p_names_animation {
+  from {
+    background-color: #726f6f;
+    color: #201f30;
+    font-weight: 400;
+    border-bottom: 1px solid #31e60d;
+  }
+
+  to {
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    border-bottom: 5px solid #31e60d;
+  }
+}
+
+.sidenav #projects {
+  max-height: 25rem;
+  overflow-y: hidden;
+}
+
+.sidenav #projects a {
+  color: white;
+  margin-bottom: 1rem;
+  font-family: 'MuseoModerno', cursive;
+}
+
+.sidenav #projects a:hover {
+  -webkit-animation-name: p_names_animation;
+  animation-name: p_names_animation;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  color: black;
+  background-color: white;
+  font-weight: 900;
+  cursor: pointer;
+  border-bottom: 5px solid #31e60d;
+}
+
+.sidenav #projects::-webkit-scrollbar {
+  display: none;
+}
